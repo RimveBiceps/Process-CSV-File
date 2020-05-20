@@ -10,7 +10,7 @@ from file_name_validation import Validation
 result_by_worker	= defaultdict(list)  # an empty list for processing data
 result_by_worker_type	= defaultdict(list)  # an empty list for processing data
 first_file_data		= list()             # list for saving processed data
-second_file_data	= list()	       # list for saving processed data
+second_file_data	= list()	     # list for saving processed data
 
 def read_data(file_name):
 	'''
