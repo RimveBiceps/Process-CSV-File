@@ -7,10 +7,10 @@ from collections import defaultdict
 from file_name_validation import Validation
 
 
-result_by_worker 	  = defaultdict(list)  # an empty list for processing data
-result_by_worker_type = defaultdict(list)  # an empty list for processing data
-first_file_data  	  = list()             # list for saving processed data
-second_file_data	  = list()			   # list for saving processed data
+result_by_worker	= defaultdict(list)  # an empty list for processing data
+result_by_worker_type	= defaultdict(list)  # an empty list for processing data
+first_file_data		= list()             # list for saving processed data
+second_file_data	= list()	       # list for saving processed data
 
 def read_data(file_name):
 	'''
@@ -22,7 +22,7 @@ def read_data(file_name):
 		next(reader, None)  # Skip the header
 		
 		for Worker, Type, Salary in reader:
-			result_by_worker[Worker.strip()] += [float(Salary)]  			 		# grouping only by worker
+			result_by_worker[Worker.strip()] += [float(Salary)]  			# grouping only by worker
 			result_by_worker_type[Worker.strip(), Type.strip()] += [float(Salary)]  # grouping by worker and type
 	
 
@@ -65,7 +65,7 @@ def run_functions():
 		read_data(file_name)
 		process_data()
 		create_csv('darbuotojas_suma_mokesciai.csv', ['Darbuotojas', 'Suma', 'Mokesciai'], first_file_data,) # CSV file is generated with columns: "Darbuotojas", "Suma", "Mokesciai"
-		create_csv('darbuotojas_tipas_suma.csv', ['Darbuotojas', 'Tipas', 'Suma'], second_file_data)		 # CSV file is generated with columns: ["Darbuotojas", "Tipas", "Suma"]
+		create_csv('darbuotojas_tipas_suma.csv', ['Darbuotojas', 'Tipas', 'Suma'], second_file_data)	     # CSV file is generated with columns: ["Darbuotojas", "Tipas", "Suma"]
 		
 		print('Done.')
 	
