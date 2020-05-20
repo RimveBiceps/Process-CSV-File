@@ -1,0 +1,23 @@
+
+Galima dirbti bet kokia norima objektine programavimo kalba. Suprogramuota programa turi būti paleidžiama iš terminalo.
+Geriausia jeigu būtų paruoštas kodas su vidine dokumentacija - komentarais ir unit-testais. Bet suprantama, jeigu dar šių dalykų nemokėsite atlikti. 
+
+1. Nuskaityti duomenis .csv formatu. Sukurti naują failą .csv formatu. Naujame faile išsaugoti duomenis lentelės formatu. Lentelėje turi būti suskaičiuota suma grupuojant pagal darbuotoją. 
+Atskirame stulpelyje reikia paskaičiuoti mokesčius nuo visos sumos. Mokesčiai - 40%.
+
+Pvz, pagal siųstus duomenis būtų: Zuokas - 100 EUR (20 + 30 + 20 + 30). Mokesčiaiiai 100 * 40% = 40 EUR
+
+Turi gautis tokia lentele išvardinant visus darbuotojus:
+
+Darbuotojas;Suma;Mokesciai
+Zuokas;100;40
+
+2. Iš tuo pačių duomenų sukurti .csv failą, kuriame būtų suskaičiuotos sumos, grupuojant pagal darbuotoją ir tipą. 
+Zuoko atveju turi atsirasti dvi eilutės, viena Priedui (30 + 30) ir viena Algai (20 + 20)
+
+Darbuotojas;Tipas;Suma
+Zuokas;Priedas;60
+Zuokas;Alga;40
+
+
+
